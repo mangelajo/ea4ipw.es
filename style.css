@@ -1,0 +1,246 @@
+:root {
+    --bg: #1a1a2e;
+    --bg-card: #16213e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --text: #eee;
+    --text-muted: #aab;
+    --link: #53a8f5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, var(--bg) 0%, var(--accent2) 100%);
+    border-bottom: 3px solid var(--accent);
+}
+
+.callsign {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
+}
+
+.op-name {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+.op-location {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+}
+
+.op-location span {
+    margin: 0 0.4rem;
+}
+
+/* Sections */
+section {
+    padding: 2.5rem 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
+    padding-left: 0.75rem;
+}
+
+p { margin-bottom: 1rem; }
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover { color: var(--accent); }
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: #fff;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.card-links img {
+    height: 20px;
+    width: auto;
+}
+
+.card-langs {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.card-langs a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.card-langs a:hover {
+    transform: scale(1.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.btn:hover {
+    background: #c73a52;
+    color: #fff;
+}
+
+/* Interests list */
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--accent2);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Links section */
+.link-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.link-list li {
+    margin-bottom: 0.8rem;
+}
+
+.link-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.link-list img {
+    height: 22px;
+    width: auto;
+}
+
+/* Ham projects grid */
+.projects-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.projects-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.projects-list li:last-child { border-bottom: none; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+footer .seventy-three {
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* GitHub logo for dark bg */
+.gh-logo {
+    filter: invert(1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .callsign { font-size: 2.8rem; }
+    .op-name { font-size: 1.1rem; }
+    header { padding: 2rem 0 1.5rem; }
+    section { padding: 1.8rem 0; }
+}
